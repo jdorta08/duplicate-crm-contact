@@ -8,7 +8,7 @@ function update_contact_id_with_existing_contact( $contact_id, $fields, $user_id
 	wp_fusion()->crm->connect();
 	
    // Get the phone number field value from the submitted form
-  $phone_number = $fields['mobilephone'];
+ 	$phone_number = $fields['mobilephone'];
 	$user_email_address = $fields['emailaddress1'];
 	
 	//formatting mobilephone
@@ -29,7 +29,7 @@ function update_contact_id_with_existing_contact( $contact_id, $fields, $user_id
 		}
 	
 	// Get the contact ID of the first value in the response
-  $contact_id = $response->value[0]->contactid;
+  	$contact_id = $response->value[0]->contactid;
 	wp_fusion()->crm->update_contact($contact_id, $fields);
 
 }
